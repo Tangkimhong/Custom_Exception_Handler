@@ -59,6 +59,9 @@ public class CustomExceptionHandling extends ResponseEntityExceptionHandler {
     }
 
 
+    /*
+     * Default exception
+     */
     @ExceptionHandler({Exception.class})
     public ResponseEntity<Object> handlerSomeControllerEx(Exception ex, WebRequest request){
         ApiError apiError = new ApiError(
